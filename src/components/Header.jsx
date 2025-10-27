@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { Container, Navbar, Nav, Button } from "react-bootstrap";
-import Productos from "../pages/Productos";
-import Clientes from "../pages/Clientes";
+
 
 export default function Header(){
     const navigate = useNavigate();
@@ -20,10 +19,11 @@ export default function Header(){
                     <Navbar.Collapse>
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to="/">Inicio</Nav.Link>
-                            <Nav.Link as={Link} to="/productos" element={<Productos></Productos>}>Productos</Nav.Link>
-                            <Nav.Link as={Link} to="/clientes" element={<Clientes></Clientes>}>Productos</Nav.Link>
-                            <Nav.Link as={Link} to="/servicios" element={<Servicios></Servicios>}>Servicios</Nav.Link>
-                            <Nav.Link as={Link} to="/contactos" element={<Contacto></Contacto>}>Contactos</Nav.Link>
+                            <Nav.Link as={Link} to="/productos" >Productos</Nav.Link>
+                            <Nav.Link as={Link} to="/clientes" >Clientes</Nav.Link>
+                            <Nav.Link as={Link} to="/servicios" >Servicios</Nav.Link>
+                            <Nav.Link as={Link} to="/contactos" >Contactos</Nav.Link>
+
 
                             {/*enlaces que se muestran si hay auth*/}
                             {isAuth && (
@@ -37,18 +37,6 @@ export default function Header(){
                                 <Button variant="outline-light" onClick={cerrarSesion}>Cerrar sesion</Button>
                             )}
                     </Navbar.Collapse>
-                {/* <Nav.Link as = {Link} to="/">
-                    Home
-                </Nav.Link> */}
-                <Nav.Link as = {Link} to="/clientes">
-                    Clientes
-                </Nav.Link><Nav.Link as = {Link} to="/productos">
-                    Productos
-                </Nav.Link><Nav.Link as = {Link} to="/servicios">
-                    Servicios
-                </Nav.Link><Nav.Link as = {Link} to="/contactos">
-                    Contactos
-                </Nav.Link>
             </Container>
         </Navbar>
     )
