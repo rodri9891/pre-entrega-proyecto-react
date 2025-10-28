@@ -27,15 +27,16 @@ export default function Header(){
 
                             {/*enlaces que se muestran si hay auth*/}
                             {isAuth && (
-                                <Nav.Link as={Link} to="/Admin">Perfil</Nav.Link>
+                                <Nav.Link as={Link} to="/admin">Perfil</Nav.Link>
                             )}
-                        </Nav>
+                            
                             {/* ctrl k c mostrar button por auth */}
                             {!isAuth ?(
-                                <Nav.Link as={Link} to="/Login">Login</Nav.Link>
+                                <Nav.Link as={Link} variant="outline-light" to="/login">Login</Nav.Link>
                             ): (
                                 <Button variant="outline-light" onClick={cerrarSesion}>Cerrar sesion</Button>
                             )}
+                            </Nav>
                     </Navbar.Collapse>
             </Container>
         </Navbar>
