@@ -1,10 +1,10 @@
-import ProductList from './ProductList';
+import Productos from '././Productos';
 
 const Ofertas = () => {
   return (
     <div className="container">
       <h1>Ofertas</h1>
-      <ProductList category="electronics"/>
+      <Productos category="electronics"/>
     </div>
   );
 };

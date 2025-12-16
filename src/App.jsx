@@ -14,6 +14,7 @@ import Login from './pages/Login';
 import Administracion from './pages/Administracion';
 import NoEncontrado from './pages/NoEncontrado';
 import Perfil from './pages/Perfil';
+import Ofertas from './pages/Ofertas';
 
 function App(){
 
@@ -23,7 +24,7 @@ function App(){
       <Container>
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
-          <Route path="/clientes" element={<Clientes></Clientes>}></Route>
+          <Route path="/ofertas" element={<Ofertas></Ofertas>}></Route>
           <Route path="/productos" element={<Productos></Productos>}></Route>
           <Route path="/servicios" element={<Servicios></Servicios>}></Route>
           <Route path="/contactos" element={<Contacto></Contacto>}></Route>
