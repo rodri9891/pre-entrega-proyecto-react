@@ -6,14 +6,14 @@ export default function Productos({ category = null }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    let url = "https://fakestoreapi.com/products";
-    if (category) {
-      url = `https://fakestoreapi.com/products/category/${category}`;
-    }
+    const url = "https://69411cac686bc3ca8165aa45.mockapi.io/api/products";
 
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
+        if (category) {
+          data = data.filter((prod) => prod.category === category);
+        }
         setProductos(data);
         setLoading(false);
       })
