@@ -27,7 +27,7 @@ export default function Header(){
 
                             {/*enlaces que se muestran si hay auth*/}
                             {isAuth && (
-                                <Nav.Link as={Link} to="/admin">Perfil</Nav.Link>
+                                <Nav.Link as={Link} to={`/perfil/${localStorage.getItem('authUser')}`}>Perfil</Nav.Link>
                             )}
                             
                             {/* ctrl k c mostrar button por auth */}

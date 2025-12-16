@@ -11,6 +11,7 @@ export default function Login() {
     e.preventDefault();
     if (username === 'admin' && password === '1234') {
       localStorage.setItem('auth', 'true');
+      localStorage.setItem('authUser', username);
       navigate(`/perfil/${username}`);
     } else {
       alert('Usuario o contraseña incorrectos');
